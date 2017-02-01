@@ -1,4 +1,9 @@
+# 21.08.16
+## This is old stable version
+
+
 # pinos
+
 Pinos is not Operating System
 
 # how to start
