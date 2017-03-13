@@ -1,5 +1,5 @@
 # 21.08.16
-## This is old stable version
+## This is stable version
 
 
 # pinos
