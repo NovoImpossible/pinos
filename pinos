@@ -1,5 +1,4 @@
 #!/bin/bash
-echo "Pinos 0. Lic: ISC. Author: Maksim Pinigin. Pre-alpha master"
-echo "Copyright (c) 2016-2017 Maksim Pinigin <pinigin_official@mail.ru>"
+echo "Pinos 0 (c) 2016-2018, Maksim Pinigin. Pre-alpha master"
 python3 /usr/bin/core.py
 exit
