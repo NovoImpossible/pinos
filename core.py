@@ -71,7 +71,7 @@ while True:
                     try:
                         if command[1][0] == "/":
                             if os.path.exists(command[1]) == True:
-                                os.removedirs(command[1])
+                                os.rmdir(command[1])
                             else:
                                 print("ERROR: Directory is't exists or access denied")
                         else:
