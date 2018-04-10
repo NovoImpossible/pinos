@@ -3,7 +3,7 @@
 #
 # === License: ===
 # === ISC ===
-# === Copyright (c) 2016-2017, Maksim Pinigin <pinigin_official@mail.ru> ===
+# === Copyright (c) 2016-2018, Maksim Pinigin <pinigin@nvie.ru> ===
 #
 
 # -*- coding: utf-8 -*-
