@@ -303,12 +303,9 @@ while True:
                             print("ERROR: Access denied or directory is't exists")
                 else:
                     print("USAGE: wf [file] [text..]")
-            elif text[0] == "!":
-                execute_text = text.replace('!', '')
-                os.system(execute_text)
             elif command[0] == "exit":
                 print("Goodbye!")
                 exit()
             else:
-                print("Command not found")
+                os.system(text)
 # ===
