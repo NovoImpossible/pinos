@@ -1,8 +1,7 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 #
-# === License: ===
-# === ISC ===
+# === License: ISC ===
 # === Copyright (c) 2016-2018, Maksim Pinigin <pinigin@nvie.ru> ===
 #
 
@@ -27,6 +26,9 @@ except:
     workdir = 0
     ifcd = 0
 # ===
+
+# pinos variables
+os.putenv("SHELL", "/bin/pinos")
 
 try:
     login = os.getlogin()
@@ -95,7 +97,7 @@ while True:
                 print('88     88 88  Y8  YbodP  8bodP      YbodP')
                 print('')
                 print("Pinos 0 Pre-alpha master")
-                print("Copyright (c) 2016-2017, Maksim Pinigin <maksim@pinig.in>")
+                print("Copyright (c) 2016-2018, Maksim Pinigin <maksim@pinig.in>")
                 print('')
             elif command[0] == "array":
                 print(command[1:])
