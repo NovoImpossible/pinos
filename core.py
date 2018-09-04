@@ -16,15 +16,11 @@ import time
 global text
 global command
 global workdir
-global ifcd
 global login
-global username
 try:
     workdir = os.getcwd()
-    ifcd = 1
 except:
-    workdir = 0
-    ifcd = 0
+    workdir = "/"
 # ===
 
 # pinos variables
@@ -39,15 +35,9 @@ except:
 while True:
 
         if login == "root":
-            if ifcd == 1:
-                text = input("# " + workdir + ": ")
-            else:
-                text = input("# /: ")
+            text = input("# " + workdir + ": ")
         else:
-            if ifcd == 1:
-                text = input("$ " + workdir + ": ")
-            else:
-                text = input("$ /: ")
+            text = input("$ " + workdir + ": ")
 
         if text:
             command = text.split(' ') # SCS
