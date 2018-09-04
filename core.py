@@ -60,27 +60,18 @@ while True:
             elif command[0] == "md":
                 if len(command) == 2:
                     try:
-                        if command[1][0] == "/":
-                            os.makedirs(command[1])
-                        else:
-                            os.makedirs(workdir + "/" + command[1])
+                        os.makedirs(command[1])
                     except:
-                        print("ERROR: Direcotry exists or access denied")
+                        print("ERROR: Directory exists or access denied")
                 else:
                     print("USAGE: md [path/to/directory]")
             elif command[0] == "rd":
                 if len(command) == 2:
                     try:
-                        if command[1][0] == "/":
-                            if os.path.exists(command[1]) == True:
-                                os.rmdir(command[1])
-                            else:
-                                print("ERROR: Directory is't exists or access denied")
+                        if os.path.exists(command[1]) == True:
+                            os.rmdir(command[1])
                         else:
-                            if os.path.exists(workdir + "/" + command[1]) == True:
-                                os.rmdir(workdir + "/" + command[1])
-                            else:
-                                print("ERROR: Directory is't exists or access denied")
+                            print("ERROR: Directory is't exists or access denied")
                     except:
                         print("ERROR: Directory is't empty")
                 else:
@@ -232,10 +223,7 @@ while True:
             #        print("Error. Maybe, file(or directory?) is not exists?")
             elif command[0] == "vf":
                 if len(command) == 2:
-                    if command[1][0] == "/":
-                        file_to_open = command[1]
-                    else:
-                        file_to_open = workdir + "/" + command[1]
+                    file_to_open = command[1]
                     try:
                         f = open(file_to_open, 'r')
                         readed = f.read()
@@ -247,10 +235,7 @@ while True:
                     print("USAGE: vf [path/to/file]")
             elif command[0] == "rf":
                 if len(command) == 2:
-                    if command[1][0] == "/":
-                        file_to_delete = command[1]
-                    else:
-                        file_to_delete = workdir + "/" + command[1]
+                    file_to_delete = command[1]
                     try:
                         os.remove(file_to_delete)
                     except:
@@ -261,14 +246,8 @@ while True:
                 print(login)
             elif command[0] == "mf":
                 if len(command) == 3:
-                    if command[1][0] == "/":
-                        file_to_move = command[1]
-                    else:
-                        file_to_move = workdir + "/" + command[1]
-                    if command[2][0] == "/":
-                        new_name = command[2]
-                    else:
-                        new_name = workdir + "/" + command[2]
+                    file_to_move = command[1]
+                    new_name = command[2]
                     try:
                         os.rename(file_to_move, new_name)
                     except:
@@ -278,10 +257,7 @@ while True:
             elif command[0] == "wf":
                 if len(command) > 2:
                     text_to_write = text.replace('wf ' + command[1] + ' ', '')
-                    if command[1][0] == "/":
-                        filename = command[1]
-                    else:
-                        filename = workdir + "/" + command[1]
+                    filename = command[1]
                     if os.path.exists(filename) == True:
                         f = open(filename, 'r')
                         old_text = f.read()
