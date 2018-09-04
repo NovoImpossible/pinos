@@ -1,4 +1,4 @@
 #!/bin/bash
-echo "Pinos 0 (c) 2016-2018, Maksim Pinigin. Pre-alpha master"
+echo "Pinos 0 (c) 2016-2018, Maksim Pinigin. Pre-alpha 04.09.18"
 python3 /usr/bin/core.py
 exit

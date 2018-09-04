@@ -1,5 +1,5 @@
-# master
-## This is unstable branch
+# 04.09.18
+## This is stable branch
 
 # pinos
 Pinos is not Operating System, this is shell for Pinos OS.
