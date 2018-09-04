@@ -76,10 +76,6 @@ while True:
                         print("ERROR: Directory is't empty")
                 else:
                     print("USAGE: rd [path/to/directory]")
-            elif command[0] == "python":
-                copyright()
-            elif command[0] == "python_commands":
-                help()
             elif command[0] == "pinos":
                 print('')
                 print('88""Yb 88 88b 88  dP"Yb  .dP"Y8      dP"Yb')
