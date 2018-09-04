@@ -180,15 +180,11 @@ while True:
                         print("Error")
             elif command[0] == "cd":
                 if len(command) == 2:
-                    if os.path.exists(command[1]):
-                        if command[1] == "-":
-                            ifcd = 0
-                        else:
-                            ifcd = 1
-                            workdir = command[1]
-                            #os.chdir(command[1])
-                    else:
-                        print("Error. Maybe, directory is not exists?")
+                    try:
+                        os.chdir(command[1])
+                        workdir = os.getcwd()
+                    except:
+                        print("ERROR: Directory is't exists")
                 else:
                     print("USAGE: cd [/path/to/directory]")
             elif command[0] == "dir" or command[0] == "ls":
