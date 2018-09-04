@@ -179,25 +179,22 @@ while True:
                 else:
                     print("USAGE: cd [/path/to/directory]")
             elif command[0] == "dir" or command[0] == "ls":
-                try:
+                if len(command) > 1:
                     ls = os.listdir(command[1])
-                    for row in ls:
-                        for elem in row:
-                            print(elem, end='')
+                else:
+                    ls = os.listdir(workdir)
+
+                column = 0
+                for row in ls:
+                    for elem in row:
+                        print(elem, end='')
+                    print(end="  ")
+                    column = column + 1
+                    if column == 5:
+                        column = 0
                         print()
-                except:
-                    try:
-                        ls = os.listdir(workdir)
-                        for row in ls:
-                            for elem in row:
-                                print(elem, end='')
-                            print()
-                    except:
-                        ls = os.listdir("/")
-                        for row in ls:
-                            for elem in row:
-                                print(elem, end='')
-                            print()
+                if column != 0 and column != 5:
+                    print()
             # Phew...
             #elif command[0] == "chmod":
             #    try:
