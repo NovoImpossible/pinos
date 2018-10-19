@@ -166,7 +166,11 @@ while True:
                     print("USAGE: cd [/path/to/directory]")
             elif command[0] == "dir" or command[0] == "ls":
                 if len(command) > 1:
-                    ls = os.listdir(command[1])
+                    if os.path.exists(command[1]) == True:
+                        ls = os.listdir(command[1])
+                    else:
+                        print("ERROR: Directory is not exists")
+                        continue
                 else:
                     ls = os.listdir(workdir)
 
